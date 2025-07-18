@@ -1,8 +1,8 @@
 use leptos::prelude::*;
 use leptos_meta::{provide_meta_context, MetaTags, Stylesheet, Title};
+use crate::homepage::HomePage;
 use crate::subpage::SubPage;
 use crate::anotherpage::AnotherPage;
-use leptos_router::components::A;
 use leptos_router::{
     components::{FlatRoutes, Route, Router},
     path,
@@ -13,10 +13,13 @@ use leptos_router::{
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {
         <!DOCTYPE html>
-        <html lang="en">
+        <html lang="de">
             <head>
                 <meta charset="utf-8"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="description" content="Author: Arne Berner,
+                    Vita, Showreel, Fotos und Kontakt für den Schauspieler Arne Berner,
+                    Single Page Application"/>
                 <AutoReload options=options.clone() />
                 <HydrationScripts options islands=true/>
                 <MetaTags/>
@@ -36,10 +39,10 @@ pub fn App() -> impl IntoView {
     view! {
         // injects a stylesheet into the document <head>
         // id=leptos means cargo-leptos will hot-reload this stylesheet
-        <Stylesheet id="leptos" href="/pkg/ssg-test.css"/>
+        <Stylesheet id="leptos" href="/pkg/arneberner.css"/>
 
         // sets the document title
-        <Title text="Welcome to Leptos"/>
+        <Title text="Arne Berner"/>
 
         // content for this welcome page
         <Router>
@@ -66,26 +69,3 @@ pub fn App() -> impl IntoView {
     }
 }
 
-/// Renders the home page of your application.
-#[component]
-fn HomePage() -> impl IntoView {
-    // Creates a reactive value to update the button
-
-    view! {
-        <h1>"Welcome to Leptos!"</h1>
-        <Counter/>
-        <A href="/sub-page">"Sub page"</A>
-        <A href="/another-page">"Another page"</A> /
-    }
-}
-
-#[island]
-fn Counter() -> impl IntoView {
-    let count = RwSignal::new(0);
-    let on_click = move |_| *count.write() += 1;
-
-    view! {
-        <button on:click=on_click>"Click Me: " {count}</button>
-    }
-
-}

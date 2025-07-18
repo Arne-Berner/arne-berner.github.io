@@ -9,7 +9,7 @@ pub fn AnotherPage() -> impl IntoView {
 }
 
 #[island]
-pub fn WindowHeight() -> impl IntoView {
+fn WindowHeight() -> impl IntoView {
     let (window_height, set_window_height) = signal::<Option<f64>>(None);
     let window_text = move || {
         window_height()

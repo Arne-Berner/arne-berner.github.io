@@ -6,7 +6,7 @@ async fn main() {
     use leptos::logging::log;
     use leptos::prelude::*;
     use leptos_axum::{generate_route_list_with_ssg, LeptosRoutes};
-    use ssg_test::app::*;
+    use arneberner::app::*;
 
     let conf = get_configuration(None).unwrap();
     let addr = conf.leptos_options.site_addr;

@@ -9,7 +9,7 @@ pub fn SubPage() -> impl IntoView {
 }
 
 #[island]
-pub fn Sub_Counter() -> impl IntoView {
+fn Sub_Counter() -> impl IntoView {
     let (count, set_count) = signal(0);
     let on_click = move |_| set_count.update(|count| *count += 1);
 

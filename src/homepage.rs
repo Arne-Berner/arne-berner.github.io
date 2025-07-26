@@ -1,4 +1,6 @@
 use leptos::prelude::*;
+use leptos_router::components::A;
+
 /// Renders the home page of your application.
 #[component]
 pub fn HomePage() -> impl IntoView {
@@ -21,13 +23,13 @@ pub fn HomePage() -> impl IntoView {
             alt="My Photo"
             style="width: 100%; height: auto; border-radius: 8px;"
         />
-        // <Counter/>
-        // <A href="/sub-page">"Sub page"</A>
-        // <A href="/another-page">"Another page"</A> /
+        <Counter/>
+        <A href="/sub-page">"Sub page"</A>
+        <A href="/another-page">"Another page"</A> /
     }
 }
 
-#[island]
+#[island(lazy)]
 fn Counter() -> impl IntoView {
     let count = RwSignal::new(0);
     let on_click = move |_| *count.write() += 1;

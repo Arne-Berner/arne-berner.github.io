@@ -1,14 +1,14 @@
 use leptos::prelude::*;
 use leptos_meta::{provide_meta_context, MetaTags, Stylesheet, Title};
-use crate::homepage::HomePage;
-use crate::subpage::SubPage;
-use crate::anotherpage::AnotherPage;
 use leptos_router::{
     components::{FlatRoutes, Route, Router},
     path,
     static_routes::StaticRoute,
     SsrMode,
 };
+use crate::homepage::HomePage;
+use crate::subpage::SubPage;
+use crate::anotherpage::AnotherPage;
 
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {

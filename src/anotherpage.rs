@@ -8,7 +8,7 @@ pub fn AnotherPage() -> impl IntoView {
     }
 }
 
-#[island]
+#[island(lazy)]
 fn WindowHeight() -> impl IntoView {
     let (window_height, set_window_height) = signal::<Option<f64>>(None);
     let window_text = move || {
@@ -24,5 +24,4 @@ fn WindowHeight() -> impl IntoView {
     view! {
         <p>"This is a another page calling browser APIs" {window_text}</p>
     }
-
 }

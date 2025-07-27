@@ -7,7 +7,7 @@ edition = "2021"
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-leptos = { version = "0.8.5", features = ["islands", "nightly"] }
+leptos = { version = "0.8.6", features = ["islands", "nightly"] }
 leptos_router = { version = "0.8.5", features = ["nightly"] }
 axum = { version = "0.8.0", optional = true }
 console_error_panic_hook = { version = "0.1", optional = true }

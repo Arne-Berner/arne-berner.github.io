@@ -39,6 +39,6 @@ function makeLoad(url, deps) {
       }
   };
 }
-const __wasm_split_load_counter_loader_2215369575368421109_window_height_loader_15579984902324837771_gV6SBVc__yIWigRVdvuRCQ = makeLoad(new URL("./counter_loader_2215369575368421109_window_height_loader_15579984902324837771.gV6SBVc__yIWigRVdvuRCQ.wasm", import.meta.url), []);
-export const __wasm_split_load_window_height_loader_15579984902324837771 = makeLoad(new URL("./window_height_loader_15579984902324837771.jL1UdLYS7Nu4XcY2Ej-t3w.wasm", import.meta.url), [__wasm_split_load_counter_loader_2215369575368421109_window_height_loader_15579984902324837771_gV6SBVc__yIWigRVdvuRCQ]);
-export const __wasm_split_load_counter_loader_2215369575368421109 = makeLoad(new URL("./counter_loader_2215369575368421109.4LrHO44IvWm4gqtdHURpSA.wasm", import.meta.url), [__wasm_split_load_counter_loader_2215369575368421109_window_height_loader_15579984902324837771_gV6SBVc__yIWigRVdvuRCQ]);
+const __wasm_split_load_sub_counter_loader_8706884541029751135_window_height_loader_15579984902324837771_GrW4e0z9i8wqXp4vUMLL_w = makeLoad(new URL("./sub_counter_loader_8706884541029751135_window_height_loader_15579984902324837771.GrW4e0z9i8wqXp4vUMLL-w.wasm", import.meta.url), []);
+export const __wasm_split_load_window_height_loader_15579984902324837771 = makeLoad(new URL("./window_height_loader_15579984902324837771.kQ2IGoYLMcehRvR_UdY2tA.wasm", import.meta.url), [__wasm_split_load_sub_counter_loader_8706884541029751135_window_height_loader_15579984902324837771_GrW4e0z9i8wqXp4vUMLL_w]);
+export const __wasm_split_load_sub_counter_loader_8706884541029751135 = makeLoad(new URL("./sub_counter_loader_8706884541029751135.GY4Mfd16wHruXjRaypoLNA.wasm", import.meta.url), [__wasm_split_load_sub_counter_loader_8706884541029751135_window_height_loader_15579984902324837771_GrW4e0z9i8wqXp4vUMLL_w]);

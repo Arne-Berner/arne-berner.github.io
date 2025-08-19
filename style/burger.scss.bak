@@ -1,3 +1,9 @@
+/*
+What I want: 
+The navbar should stay on top
+the Menu button should be on the right side, so I'll need a grid
+when the menu button is opened a grid with 3 rows should appear beneath it, and it should expandkjk
+*/
 :root {
     --nav-bg: rgba(255, 255, 255, 0.85);
     --text: #111;
@@ -23,18 +29,62 @@
     height: auto;
     min-height: 60px;
     display: grid;
-    grid-template-columns: 1fr auto;
+    // might need more columns for this to make sence,
+    // but I also just want the columns to be justified to some side?
+    // fr is a fractional unit of the available space
+    //grid-template-rows: 60px minmax(20px,1fr) 100px; // repeat(2 100px) repeats 100px twice
+    // grid-template-rows: 60px minmax(20px,1fr) 100px; // repeat(2 100px) repeats 100px twice
+    grid-template-columns: 1fr 1fr;
+    /*
     grid-template-area:
-      'name-area burger-area'
-      'space menu-area';
-    justify-items: end; // or start or stretch(default) or baseline
-    align-items: center;
+      'space burger'
+      'space menu'
+    */  
+    /*
+    // this will name the rows and columns, they can now be referenced inside the items via
+    // grid-area: photos;
+    grid-template-area: 
+      'space menu-name burger'
+      'space vita vita'
+      'space photos photos'
+      'space showreel showreel'
+      'space contact contact';
+    */
+    // justify-items: end // or start or stretch(default) or baseline
+    // align-items: center
+    // justify and align-content will place the container inside the container it is.
+    // it takes start end center baseline space-between space-around and space-evenly as an argument
+    // grid-gap: 1em, 3em; // grid gap row & column
+    // grid-auto-rows: 100px; // this will create new rows as necessary with 100px wide
+    // grid-auto-columns: 100px; // this will create new columns as necessary with 100px wide
+    // grid-auto-flow: column; // this will make new items start in a new column instead of row
+    column-gap: 10px;
 }
 
+/*
+// Responsive grid without media queries
+.container{
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+
+}
+*/
+
+// place items in the grid. 
+/*
+.right {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: end;
+    align-items: center;
+}
+*/
+
+
 .burger {
-    // grid-area: 1 / -2 / 2 / -1;
-    grid-column: 2;
-    justify-self: end;
+    // grid-area: burger;
+    grid-column: 1 / -1;
     width: 44px;
     height: 44px;
     border: 1px solid var(--border);
@@ -79,7 +129,9 @@
 }
 
 .menu {
-    grid-area: 2 / -2 / 3 / -1;
+    right: auto;
+    top: auto;
+    grid-column: 2 / -1;
     display: none;
     align-items: center;
     justify-content: end;
@@ -93,11 +145,11 @@
 
 .menu.open {
     display: flex;
-    animation: fadeIn .30s ease-out;
+    animation: fadeIn 2s ease-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-4px); }
+    from { opacity: 0; transform: translateY(-20px); }
     //from { opacity: 0; transform: translateY(-4px); }
     to { opacity: 1; transform: translateY(0); }
 }
@@ -108,18 +160,12 @@
     color: var(--text);
     border-radius: 8px;
     // only hover feedback?
-    transition: background .12s ease, color .12s ease;
+    transition: background 2.12s ease, color 2.12s ease;
     font-weight: 500;
 }
 
 .menu a:hover {
     background: #f7f7f7;
-}
-
-.name {
-    // grid-area: 1 / 1 / 2 / 2;
-    grid-column: 1;
-    justify-self: start;
 }
 
 /* Respect reduced motion */
@@ -128,7 +174,3 @@
     .menu.open { transition: none; animation: none; }
 }
 
-// photos
-.photos-list {
-  display: grid;
-}

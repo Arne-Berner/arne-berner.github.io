@@ -5,29 +5,38 @@ use leptos::prelude::*;
 #[component]
 pub fn HomePage() -> impl IntoView {
     // Creates a reactive value to update the button
+    let actor_name = "Arne Berner";
+    let copyright_owner = "Hannes Gorissen";
+    let copyright_year = "2025";
+    let copyright_by = format!("© {copyright_owner} {copyright_year}");
+
 
     view! {
-        <nav class="nav">
-            <NavBar/>
-        </nav>
-        <h1>"Photos"</h1>
-        <div class="photos-list">
-          <img
-              src="/DSC01871-800.webp"
-              srcset="
-                  /DSC01871-400.webp 400w,
-                  /DSC01871-600.webp 600w,
-                  /DSC01871-800.webp 800w,
-                  /DSC01871-1024.webp 1024w,
-                  /DSC01871-1200.webp 1200w,
-                  /DSC01871-1600.webp 1600w,
-                  /DSC01871-1920.webp 1920w
-              "
-              sizes="(max-width: 600px) 100vw, 800px"
-              alt="My Photo"
-              style="width: 100%; height: auto; border-radius: 8px;"
-          />
-        </div>
+      <nav class="nav">
+        <NavBar/>
+      </nav>
+      <main class="viewport">
+      <figure class="hero" role="group" aria-label="Arne Berner Portrait">
+        <img
+            src="/Headshot-800.webp"
+            srcset="
+              /Headshot-400.webp 400w,
+              /Headshot-600.webp 600w,
+              /Headshot-800.webp 800w,
+              /Headshot-1024.webp 1024w,
+              /Headshot-1200.webp 1200w,
+              /Headshot-1600.webp 1600w,
+              /Headshot-1920.webp 1920w
+            "
+          loading="eager"
+          alt="Ein Portraitbild welches den Schauspieler Arne Berner zeigt,
+            der in die Kamera schaut."
+          decoding="async"
+          fetchpriority="high"
+        />
+          <figcaption class="copyright">{copyright_by}</figcaption>
+        </figure>
+      </main>
     }
 }
 
@@ -40,7 +49,7 @@ fn NavBar() -> impl IntoView {
 
     view! {
         <div class="nav-inner">
-            <div class="name">Arne</div>
+            <div class="name">Arne Berner</div>
             <button
                 class="burger"
                 aria-label="Toggle menu"

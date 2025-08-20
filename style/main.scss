@@ -1,5 +1,2 @@
 @use "navbar";
-// photos
-.photos-list {
-  display: grid;
-}
+@use "photos-list";

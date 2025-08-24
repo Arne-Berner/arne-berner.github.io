@@ -20,7 +20,7 @@
 
 .nav-inner {
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 12px 16px;
     height: auto;
     min-height: var(--nav-h);
     display: grid;
@@ -78,7 +78,7 @@
 }
 
 .menu {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2 / 2 / 3 / 4;
     display: none;
     align-items: center;
     justify-content: end;
@@ -88,8 +88,6 @@
     box-shadow: none;
     // maybe more padding?
     padding: 8px 0 0;
-    font-family: "Quattrocento", Georgia, serif;
-    color: #222;
     text-decoration: none;
 }
 
@@ -105,7 +103,7 @@
 }
 
 .menu a {
-    padding: 10px 12px;
+    padding: 10px 6px;
     text-decoration: none;
     color: var(--text);
     border-radius: 8px;
@@ -114,7 +112,7 @@
     font-weight: 500;
     text-decoration: none;
     font-family: "Quattrocento", Georgia, serif;
-	font-size: clamp(1.5rem, 2.5vw, 3rem);
+	font-size: clamp(1.2rem, 2.5vw, 3rem);
     color: #222;
 }
 
@@ -126,7 +124,7 @@
     grid-area: 1 / 1 / 2 / 3;
     justify-self: start;
 	font-family: "Oswald", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-	font-size: clamp(2rem, 5vw, 4rem);
+	font-size: clamp(2.5rem, 5vw, 5rem);
 	color: #000;
 }
 

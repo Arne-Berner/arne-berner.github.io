@@ -31,6 +31,8 @@ pub fn NavBar() -> impl IntoView {
             <a href="/vita">Vita</a>
             <a href="/photos">Photos</a>
             <a href="/showreel">Showreel</a>
+            <a href="/audio">Vita</a>
+            <a href="/contact">Photos</a>
           </div>
         </div>
       </nav>

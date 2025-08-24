@@ -9,6 +9,7 @@ use leptos_router::{
 use crate::homepage::HomePage;
 use crate::subpage::SubPage;
 use crate::anotherpage::AnotherPage;
+use crate::impressum::Impressum;
 
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {
@@ -61,6 +62,11 @@ pub fn App() -> impl IntoView {
                     <Route
                         path=path!("/another-page")
                         view=AnotherPage
+                        ssr=SsrMode::Static(StaticRoute::new())
+                    />
+                    <Route
+                        path=path!("/impressum")
+                        view=Impressum
                         ssr=SsrMode::Static(StaticRoute::new())
                     />
                 </FlatRoutes>

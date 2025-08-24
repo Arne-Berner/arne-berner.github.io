@@ -92,6 +92,12 @@
     padding: 8px 0 0;
 }
 
+.menu a {
+    font-family: "Quattrocento", Georgia, serif;
+    color: #222;
+    text-decoration: none;
+}
+
 .menu.open {
     display: flex;
     animation: fadeIn .30s ease-out;
@@ -130,4 +136,13 @@
 @media (prefers-reduced-motion: reduce) {
     .burger span,
     .menu.open { transition: none; animation: none; }
+}
+
+@media (min-width: 768px) {
+  .burger { display: none; }
+  .menu {
+    display: flex !important;
+    grid-area: 1 / 2 / 2 / 3; /* move to first row beside name */
+    padding: 0;
+  }
 }

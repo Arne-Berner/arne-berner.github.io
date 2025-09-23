@@ -12,30 +12,45 @@ pub fn HomePage() -> impl IntoView {
 
 
     view! {
-      <NavBar/>
+      <NavBar />
       <main class="viewport">
-      <figure class="hero" role="group" aria-label="Arne Berner Portrait">
-        <img
+        <figure class="hero" aria-label="Arne Berner Portrait">
+          <img
             src="/Headshot-800.webp"
             srcset="
-              /Headshot-400.webp 400w,
-              /Headshot-600.webp 600w,
-              /Headshot-800.webp 800w,
-              /Headshot-1024.webp 1024w,
-              /Headshot-1200.webp 1200w,
-              /Headshot-1600.webp 1600w,
-              /Headshot-1920.webp 1920w
+            /Headshot-400.webp 400w,
+            /Headshot-600.webp 600w,
+            /Headshot-800.webp 800w,
+            /Headshot-1024.webp 1024w,
+            /Headshot-1200.webp 1200w,
+            /Headshot-1600.webp 1600w,
+            /Headshot-1920.webp 1920w
             "
-          loading="eager"
-          alt="Ein Portraitbild welches den Schauspieler Arne Berner zeigt,
+            loading="eager"
+            alt="Ein Portraitbild welches den Schauspieler Arne Berner zeigt,
             der in die Kamera schaut."
-          decoding="async"
-          fetchpriority="high"
-        />
+            decoding="async"
+            fetchpriority="high"
+          />
           <figcaption class="copyright">{copyright_by}</figcaption>
         </figure>
       </main>
-      <SiteFooter/>
+      <SiteFooter />
     }
+}
+
+#[island]
+pub fn Tailwind() -> impl IntoView {
+    let (count, set_count) = signal(0);
+    let on_click = move |_| {*set_count.write() += 1;};
+
+    view! {
+      <h1 class="m-8 text-8xl underline decoration-wavy">"Welcome to Leptos!"</h1>
+      <button class="m-8 btn btn-primary" on:click=on_click>
+        "Click Me: "
+        {count}
+      </button>
+    }
+
 }
 

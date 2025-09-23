@@ -3,8 +3,8 @@ use leptos::prelude::*;
 #[component]
 pub fn AnotherPage() -> impl IntoView {
     view! {
-        <h1>"Another Page"</h1>
-        <WindowHeight/>
+      <h1>"Another Page"</h1>
+      <WindowHeight />
     }
 }
 
@@ -21,7 +21,5 @@ fn WindowHeight() -> impl IntoView {
     Effect::new(move |_| {
         set_window_height(window().inner_height().ok().map(|w| w.as_f64().unwrap()));
     });
-    view! {
-        <p>"This is a another page calling browser APIs" {window_text}</p>
-    }
+    view! { <p>"This is a another page calling browser APIs" {window_text}</p> }
 }

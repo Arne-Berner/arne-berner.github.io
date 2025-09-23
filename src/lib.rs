@@ -2,9 +2,7 @@ pub mod app;
 pub mod subpage;
 pub mod anotherpage;
 pub mod homepage;
-pub mod impressum;
 pub mod common;
-pub mod photos;
 
 #[cfg(feature = "hydrate")]
 #[wasm_bindgen::prelude::wasm_bindgen]

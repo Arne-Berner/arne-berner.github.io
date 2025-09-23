@@ -39,9 +39,9 @@ pub fn NavBar() -> impl IntoView {
                 stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <rect x="3" y="6" width="18" height="2" rx="1" />
-                <rect x="3" y="11" width="18" height="2" rx="1" />
-                <rect x="3" y="16" width="18" height="2" rx="1" />
+                <rect x="3" y="6" width="18" height="1" rx="1" />
+                <rect x="3" y="11" width="18" height="1" rx="1" />
+                <rect x="3" y="16" width="18" height="1" rx="1" />
               </svg>
             </div>
             <ul
@@ -67,21 +67,5 @@ pub fn NavBar() -> impl IntoView {
           </div>
         </div>
       </div>
-    }
-}
-
-#[component]
-pub fn SiteFooter() -> impl IntoView {
-    view! {
-      <footer class="site-footer">
-        <div class="footer-inner">
-          <nav aria-label="Legal links" class="legal-nav">
-            <a href="/impressum" class="impressum-link">
-              "Impressum"
-            </a>
-          </nav>
-          <p class="site-copy">"©ArneBerner 2025"</p>
-        </div>
-      </footer>
     }
 }

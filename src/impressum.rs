@@ -1,5 +1,6 @@
 use leptos::prelude::*;
-use crate::common::{NavBar, SiteFooter};
+use crate::navbar::{NavBar};
+use crate::footer::{SiteFooter};
 // use leptos_router::components::A;
 
 /// Impressum

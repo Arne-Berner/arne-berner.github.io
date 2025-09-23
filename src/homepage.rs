@@ -1,5 +1,6 @@
 use leptos::prelude::*;
-use crate::common::{NavBar, SiteFooter};
+use crate::common::navbar::NavBar;
+use crate::common::footer::SiteFooter;
 // use leptos_router::components::A;
 
 /// Renders the home page of your application.
@@ -13,44 +14,26 @@ pub fn HomePage() -> impl IntoView {
 
     view! {
       <NavBar />
-      <main class="viewport">
-        <figure class="hero" aria-label="Arne Berner Portrait">
-          <img
-            src="/Headshot-800.webp"
-            srcset="
-            /Headshot-400.webp 400w,
-            /Headshot-600.webp 600w,
-            /Headshot-800.webp 800w,
-            /Headshot-1024.webp 1024w,
-            /Headshot-1200.webp 1200w,
-            /Headshot-1600.webp 1600w,
-            /Headshot-1920.webp 1920w
-            "
-            loading="eager"
-            alt="Ein Portraitbild welches den Schauspieler Arne Berner zeigt,
-            der in die Kamera schaut."
-            decoding="async"
-            fetchpriority="high"
-          />
-          <figcaption class="copyright">{copyright_by}</figcaption>
-        </figure>
-      </main>
+      <Hero />
       <SiteFooter />
     }
 }
 
-#[island]
-pub fn Tailwind() -> impl IntoView {
-    let (count, set_count) = signal(0);
-    let on_click = move |_| {*set_count.write() += 1;};
-
+#[component]
+pub fn Hero() -> impl IntoView {
     view! {
-      <h1 class="m-8 text-8xl underline decoration-wavy">"Welcome to Leptos!"</h1>
-      <button class="m-8 btn btn-primary" on:click=on_click>
-        "Click Me: "
-        {count}
-      </button>
+      <div class="hero min-h-screen" style="background-image: url('/Headshot-1920.webp');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-neutral-content text-center">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">"Moin moin!"</h1>
+            <p class="mb-5">"Warum moin moin? Wenn es um Film geht, werde ich gesprächig."</p>
+            <a class="btn btn-primary" href="/contact">
+              "Kontakt"
+            </a>
+          </div>
+        </div>
+      </div>
     }
-
 }
 

@@ -1,4 +1,5 @@
 import * as __wbg_star0 from '/pkg/__wasm_split.______________________.js';
+import * as __wbg_star1 from '__wbindgen_placeholder__';
 
 let wasm;
 
@@ -239,26 +240,15 @@ export function WindowHeight_5742447869048596280(el) {
     return takeObject(ret);
 }
 
-/**
- * @param {HTMLElement} el
- */
-export function Tailwind_12027418182426078203(el) {
-    wasm.Tailwind_12027418182426078203(addHeapObject(el));
-}
-
 export function hydrate() {
     wasm.hydrate();
 }
 
 function __wbg_adapter_28(arg0, arg1, arg2) {
-    wasm._ZN136__LT_dyn_u20_core__ops__function__FnMut_LT__LP_A_C__RP__GT__u2b_Output_u20__u3d__u20_R_u20_as_u20_wasm_bindgen__closure__WasmClosure_GT_8describe6invoke17h12cde9eb49fc70aeE(arg0, arg1, addHeapObject(arg2));
-}
-
-function __wbg_adapter_31(arg0, arg1, arg2) {
     wasm._ZN136__LT_dyn_u20_core__ops__function__FnMut_LT__LP_A_C__RP__GT__u2b_Output_u20__u3d__u20_R_u20_as_u20_wasm_bindgen__closure__WasmClosure_GT_8describe6invoke17h3f1251f5a30c2cceE(arg0, arg1, addHeapObject(arg2));
 }
 
-function __wbg_adapter_126(arg0, arg1, arg2, arg3) {
+function __wbg_adapter_122(arg0, arg1, arg2, arg3) {
     wasm._ZN12wasm_bindgen7convert8closures11invoke2_mut17h1fd2930482384290E(arg0, arg1, addHeapObject(arg2), addHeapObject(arg3));
 }
 
@@ -566,7 +556,7 @@ function __wbg_get_imports() {
                 const a = state0.a;
                 state0.a = 0;
                 try {
-                    return __wbg_adapter_126(a, state0.b, arg0, arg1);
+                    return __wbg_adapter_122(a, state0.b, arg0, arg1);
                 } finally {
                     state0.a = a;
                 }
@@ -684,12 +674,8 @@ function __wbg_get_imports() {
         const ret = false;
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper2370 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 265, __wbg_adapter_31);
-        return addHeapObject(ret);
-    };
-    imports.wbg.__wbindgen_closure_wrapper538 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 146, __wbg_adapter_28);
+    imports.wbg.__wbindgen_closure_wrapper1923 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 184, __wbg_adapter_28);
         return addHeapObject(ret);
     };
     imports.wbg.__wbindgen_debug_string = function(arg0, arg1) {
@@ -748,6 +734,7 @@ function __wbg_get_imports() {
         throw new Error(getStringFromWasm0(arg0, arg1));
     };
     imports['/pkg/__wasm_split.______________________.js'] = __wbg_star0;
+    imports['__wbindgen_placeholder__'] = __wbg_star1;
 
     return imports;
 }

@@ -31,7 +31,7 @@ pub fn SiteFooter() -> impl IntoView {
   </nav>
   <aside>
     <p>
-      "Photo Copyright © "{copyright_by}
+      "Photo Copyright "{copyright_by}
     </p>
   </aside>
 </footer>

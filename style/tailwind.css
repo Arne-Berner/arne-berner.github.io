@@ -31,6 +31,6 @@
 }
 
 @plugin "./daisyui.js" {
- themes: light --default, dark --prefersdark, cupcake;
+ themes: light --default, dark --prefersdark, cupcake, lemonade;
 }
 

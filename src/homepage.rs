@@ -6,12 +6,6 @@ use crate::common::footer::SiteFooter;
 /// Renders the home page of your application.
 #[component]
 pub fn HomePage() -> impl IntoView {
-    // Creates a reactive value to update the button
-    let copyright_owner = "Hannes Gorissen";
-    let copyright_year = "2025";
-    let copyright_by = format!("© {copyright_owner} {copyright_year}");
-
-
     view! {
       <NavBar />
       <Hero />

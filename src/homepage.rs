@@ -17,14 +17,14 @@ pub fn HomePage() -> impl IntoView {
 pub fn Hero() -> impl IntoView {
     view! {
       <div
-        class="hero min-h-screen bg-center bg-no-repeat bg-cover lg:[background-size:contain]"
-        style="background-image: url('/Headshot-1920.webp');"
+        class="hero min-h-screen bg-center bg-no-repeat bg-cover"
       >
         <div class="hero-overlay"></div>
         <div class="hero-content text-neutral-content text-center">
           <div class="max-w-md">
             <h1 class="mb-5 text-5xl font-bold">"Moin moin!"</h1>
-            <p class="mb-5">"Warum moin moin? Wenn es um Film geht, werde ich gesprächig."</p>
+            <p class="mb-5">"Warum moin moin fragst du dich? 
+            Wenn es um Film geht, werde ich gesprächig. Deswegen schreib' mich gerne jederzeit an, wenn du Lust hast über Filmrollen zu schnacken!"</p>
             <a class="btn btn-primary" href="/contact">
               "Kontakt"
             </a>

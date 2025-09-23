@@ -12,7 +12,7 @@ use crate::subpage::SubPage;
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {
       <!DOCTYPE html>
-      <html lang="de" data-theme="lemonade">
+      <html lang="de" data-theme="cupcake">
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />

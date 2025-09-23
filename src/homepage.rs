@@ -16,7 +16,10 @@ pub fn HomePage() -> impl IntoView {
 #[component]
 pub fn Hero() -> impl IntoView {
     view! {
-      <div class="hero min-h-screen" style="background-image: url('/Headshot-1920.webp');">
+      <div
+        class="hero min-h-screen bg-center bg-no-repeat bg-cover lg:[background-size:contain]"
+        style="background-image: url('/Headshot-1920.webp');"
+      >
         <div class="hero-overlay"></div>
         <div class="hero-content text-neutral-content text-center">
           <div class="max-w-md">

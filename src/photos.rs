@@ -19,8 +19,22 @@ pub fn Carousel() -> impl IntoView {
       <div class="carousel w-full">
         <div id="slide1" class="carousel-item relative w-full">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
             class="w-full"
+            src="./photos/DSC01699-800.webp"
+            srcset="
+            ./photos/DSC01699-400.webp 400w,
+            ./photos/DSC01699-600.webp 600w,
+            ./photos/DSC01699-800.webp 800w,
+            ./photos/DSC01699-1024.webp 1024w,
+            ./photos/DSC01699-1200.webp 1200w,
+            ./photos/DSC01699-1600.webp 1600w,
+            ./photos/DSC01699-1920.webp 1920w
+            "
+            loading="eager"
+            alt="Ein Portraitbild welches den Schauspieler Arne Berner zeigt,
+            der in die Kamera schaut."
+            decoding="async"
+            fetchpriority="high"
           />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide4" class="btn btn-circle">
@@ -33,8 +47,22 @@ pub fn Carousel() -> impl IntoView {
         </div>
         <div id="slide2" class="carousel-item relative w-full">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
             class="w-full"
+            src="./photos/DSC01810-800.webp"
+            srcset="
+            ./photos/DSC01810-400.webp 400w,
+            ./photos/DSC01810-600.webp 600w,
+            ./photos/DSC01810-800.webp 800w,
+            ./photos/DSC01810-1024.webp 1024w,
+            ./photos/DSC01810-1200.webp 1200w,
+            ./photos/DSC01810-1600.webp 1600w,
+            ./photos/DSC01810-1920.webp 1920w
+            "
+            loading="eager"
+            alt="Ein Portraitbild welches den Schauspieler Arne Berner zeigt,
+            der in die Kamera schaut."
+            decoding="async"
+            fetchpriority="high"
           />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide1" class="btn btn-circle">

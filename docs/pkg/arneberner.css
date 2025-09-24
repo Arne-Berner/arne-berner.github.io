@@ -63,7 +63,6 @@ p, address {
     --font-weight-bold: 700;
     --ease-out: cubic-bezier(0, 0, .2, 1);
     --ease-in-out: cubic-bezier(.4, 0, .2, 1);
-    --blur-sm: 8px;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: var(--font-sans);
@@ -4443,10 +4442,6 @@ p, address {
     transform-origin: bottom;
   }
 
-  .top-0 {
-    top: calc(var(--spacing) * 0);
-  }
-
   .top-1\/2 {
     top: 50%;
   }
@@ -4911,10 +4906,6 @@ p, address {
 
   .z-1 {
     z-index: 1;
-  }
-
-  .z-50 {
-    z-index: 50;
   }
 
   .tab-content {
@@ -7755,16 +7746,6 @@ p, address {
     background-color: var(--color-base-100);
   }
 
-  .bg-base-100\/80 {
-    background-color: var(--color-base-100);
-  }
-
-  @supports (color: color-mix(in lab, red, red)) {
-    .bg-base-100\/80 {
-      background-color: color-mix(in oklab, var(--color-base-100) 80%, transparent);
-    }
-  }
-
   .bg-base-200 {
     background-color: var(--color-base-200);
   }
@@ -7919,6 +7900,10 @@ p, address {
 
   .mask-repeat {
     mask-repeat: repeat;
+  }
+
+  .object-cover {
+    object-fit: cover;
   }
 
   .checkbox-lg {
@@ -8766,6 +8751,11 @@ p, address {
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, #0000001a), 0 1px 2px -1px var(--tw-shadow-color, #0000001a);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -8795,12 +8785,6 @@ p, address {
 
   .filter {
     filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
-  }
-
-  .backdrop-blur-sm {
-    --tw-backdrop-blur: blur(var(--blur-sm));
-    -webkit-backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
-    backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
   }
 
   .backdrop-filter {
@@ -9196,10 +9180,6 @@ p, address {
   .timeline-snap-icon > li {
     --timeline-col-start: .5rem;
     --timeline-row-start: minmax(0, 1fr);
-  }
-
-  .\[backdrop-blur\:5px\] {
-    backdrop-blur: 5px;
   }
 
   .input-accent, .input-accent:focus, .input-accent:focus-within {

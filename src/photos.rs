@@ -2,6 +2,7 @@ use leptos::prelude::*;
 use crate::common::navbar::NavBar;
 use crate::common::footer::SiteFooter;
 // use leptos_router::components::A;
+// TODO: make every picture into a component that just takes the image source file for clarity
 
 /// Renders the home page of your application.
 #[component]
@@ -19,7 +20,7 @@ pub fn Carousel() -> impl IntoView {
       <div class="carousel w-full">
         <div id="slide1" class="carousel-item relative max-h-screen">
           <img
-            class="max-h-screen"
+            class="max-h-screen object-cover"
             src="./photos/DSC01699-800.webp"
             srcset="
             ./photos/DSC01699-400.webp 400w,
@@ -47,7 +48,7 @@ pub fn Carousel() -> impl IntoView {
         </div>
         <div id="slide2" class="carousel-item relative max-h-screen">
           <img
-            class="max-h-screen"
+            class="max-h-screen object-cover"
             src="./photos/DSC01810-800.webp"
             srcset="
             ./photos/DSC01810-400.webp 400w,
@@ -76,7 +77,7 @@ pub fn Carousel() -> impl IntoView {
         <div id="slide3" class="carousel-item relative w-full">
           <img
             src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-            class="w-full"
+            class="max-h-screen object-cover"
           />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide2" class="btn btn-circle">
@@ -90,7 +91,9 @@ pub fn Carousel() -> impl IntoView {
         <div id="slide4" class="carousel-item relative w-full">
           <img
             src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-            class="w-full"
+            class="max-h-screen object-cover"
+          />
+          <div 
           />
           <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a href="#slide3" class="btn btn-circle">

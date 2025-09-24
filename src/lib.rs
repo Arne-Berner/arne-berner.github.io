@@ -1,7 +1,6 @@
 pub mod app;
-pub mod subpage;
-pub mod anotherpage;
 pub mod homepage;
+pub mod photos;
 pub mod common;
 
 #[cfg(feature = "hydrate")]

@@ -1,0 +1,12 @@
+{
+  "author": "Arne Berner",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "leptos-tailwind",
+  "scripts": {
+    "build": "~/tailwindcss -i ./input.css -o ./style/output.css",
+    "watch": "~/tailwindcss -i ./input.css -o ./style/output.css --watch"
+  },
+  "version": "1.0.0"
+}

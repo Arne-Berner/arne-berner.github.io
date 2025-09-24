@@ -1,53 +1,52 @@
 use leptos::prelude::*;
-use crate::navbar::{NavBar};
-use crate::footer::{SiteFooter};
+use crate::common::navbar::NavBar;
+use crate::common::footer::SiteFooter;
+// use leptos_router::components::A;
+
+/// Renders the home page of your application.
+#[component]
+pub fn HomePage() -> impl IntoView {
+    view! {
+      <NavBar />
+      <Photos />
+      <SiteFooter />
+    }
+}
 
 #[component]
 pub fn Photos() -> impl IntoView {
     view! {
-      <NavBar />
-      <body>
-        <main class="gallery" aria-label="Actor photo gallery">
-          <div class="carousel">
-            <div class="card">
-              <h3>"Card 1"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 2"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 3"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 4"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 5"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 6"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 7"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 8"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 9"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 10"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 11"</h3>
-            </div>
-            <div class="card">
-              <h3>"Card 12"</h3>
-            </div>
-          </div>
-        </main>
-      </body>
-      <SiteFooter />
+        <div class="carousel carousel-end rounded-box">
+  <div class="carousel-item">
+    <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" alt="Drink" />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
+      alt="Drink" />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
+      alt="Drink" />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
+      alt="Drink" />
+  </div>
+  <div class="carousel-item">
+    <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" alt="Drink" />
+  </div>
+  <div class="carousel-item">
+    <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" alt="Drink" />
+  </div>
+  <div class="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
+      alt="Drink" />
+  </div>
+</div>
     }
 }
+

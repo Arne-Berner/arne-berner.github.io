@@ -4442,6 +4442,14 @@ p, address {
     transform-origin: bottom;
   }
 
+  .top-1\/2 {
+    top: 50%;
+  }
+
+  .right-5 {
+    right: calc(var(--spacing) * 5);
+  }
+
   .dock-sm {
     height: 3.5rem;
     height: 3.5rem;
@@ -4493,6 +4501,10 @@ p, address {
 
   .dock-xs .dock-label {
     font-size: .625rem;
+  }
+
+  .left-5 {
+    left: calc(var(--spacing) * 5);
   }
 
   .file-input {
@@ -6907,6 +6919,10 @@ p, address {
     width: calc(var(--spacing) * 52);
   }
 
+  .w-full {
+    width: 100%;
+  }
+
   .max-w-md {
     max-width: var(--container-md);
   }
@@ -6921,6 +6937,11 @@ p, address {
 
   .border-collapse {
     border-collapse: collapse;
+  }
+
+  .-translate-y-1\/2 {
+    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
 
   .swap-rotate .swap-on, .swap-rotate input:indeterminate ~ .swap-on {
@@ -7115,6 +7136,10 @@ p, address {
 
   .flex-wrap {
     flex-wrap: wrap;
+  }
+
+  .justify-between {
+    justify-content: space-between;
   }
 
   .justify-center {
@@ -9674,6 +9699,24 @@ p, address {
   }
 }
 
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false
@@ -9914,6 +9957,9 @@ p, address {
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;

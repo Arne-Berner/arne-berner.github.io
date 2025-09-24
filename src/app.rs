@@ -7,6 +7,7 @@ use leptos_router::{
     SsrMode,
 };
 use crate::homepage::HomePage;
+use crate::photos::Photos;
 
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {

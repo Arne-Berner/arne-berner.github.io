@@ -3,7 +3,7 @@ use leptos::prelude::*;
 #[component]
 pub fn NavBar() -> impl IntoView {
     view! {
-      <nav class="navbar sticky top-0 z-50 bg-base-100/80 backdrop-blur-sm [backdrop-blur:5px]" aria-label="Main navigation">
+      <nav class="navbar bg-base-100 shadow-sm" aria-label="Main navigation">
         <div class="navbar-start">
           <a class="btn btn-ghost text-xl" href="/" aria-label="Home page: Arne Berner">
             Arne Berner

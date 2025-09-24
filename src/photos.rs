@@ -34,15 +34,11 @@ pub fn Carousel() -> impl IntoView {
         .map(|(num, ident)| {
             let filename = format!("DSC0{}",ident);
             let slide_data = SlideData::new(filename, num);
-            view!{<Slide slide_data={slide_data}/>}
+            view! { <Slide slide_data=slide_data /> }
         })
         .collect::<Vec<_>>();
         
-    view! {
-      <div class="carousel carousel-center w-full bg-neutral space-x-4 p-4">
-        {filenames}
-      </div>
-    }
+    view! { <div class="carousel carousel-center w-full bg-neutral space-x-4 p-4">{filenames}</div> }
 }
 
 #[component]
@@ -59,17 +55,17 @@ pub fn Slide(
     let default_src = format!("./photos/{}-800.webp", slide_data.filename);
     let alt_text = alt.unwrap_or_else(|| slide_data.filename.clone());
     let current = format!("slide{}", slide_data.number);
-    view! { 
-        <div id=current class="carousel-item relative max-h-screen">
-            <img
-                class="max-h-screen object-cover"
-                src=default_src
-                srcset=srcset
-                loading="eager"
-                alt=alt_text
-                decoding="async"
-                fetchpriority="high"
-            />
-        </div>
+    view! {
+      <div id=current class="carousel-item relative max-h-screen">
+        <img
+          class="max-h-screen object-cover"
+          src=default_src
+          srcset=srcset
+          loading="eager"
+          alt=alt_text
+          decoding="async"
+          fetchpriority="high"
+        />
+      </div>
     }
 }

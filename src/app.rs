@@ -9,6 +9,8 @@ use leptos_router::{
 use crate::homepage::HomePage;
 use crate::vita::Vita;
 use crate::photos::Photos;
+use crate::audio::Audio;
+use crate::video::Video;
 
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {
@@ -54,6 +56,8 @@ pub fn App() -> impl IntoView {
             <Route path=path!("/") view=HomePage ssr=SsrMode::Static(StaticRoute::new()) />
             <Route path=path!("/vita") view=Vita ssr=SsrMode::Static(StaticRoute::new()) />
             <Route path=path!("/photos") view=Photos ssr=SsrMode::Static(StaticRoute::new()) />
+            <Route path=path!("/audio") view=Audio ssr=SsrMode::Static(StaticRoute::new()) />
+           <Route path=path!("/video") view=Video ssr=SsrMode::Static(StaticRoute::new()) />
           </FlatRoutes>
         </main>
       </Router>

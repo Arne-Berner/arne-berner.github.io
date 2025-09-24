@@ -8328,8 +8328,8 @@ p, address {
     text-wrap: wrap;
   }
 
-  .whitespace-pre {
-    white-space: pre;
+  .whitespace-pre-wrap {
+    white-space: pre-wrap;
   }
 
   .file-input-accent {
@@ -9471,8 +9471,8 @@ p, address {
   }
 
   @media (min-width: 48rem) {
-    .md\:whitespace-pre {
-      white-space: pre;
+    .md\:whitespace-pre-wrap {
+      white-space: pre-wrap;
     }
   }
 

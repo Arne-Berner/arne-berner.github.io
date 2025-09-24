@@ -56,8 +56,6 @@ p, address {
     --container-md: 28rem;
     --text-sm: .875rem;
     --text-sm--line-height: calc(1.25 / .875);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-bold: 700;
@@ -4442,14 +4440,6 @@ p, address {
     transform-origin: bottom;
   }
 
-  .top-1\/2 {
-    top: 50%;
-  }
-
-  .right-5 {
-    right: calc(var(--spacing) * 5);
-  }
-
   .dock-sm {
     height: 3.5rem;
     height: 3.5rem;
@@ -4501,10 +4491,6 @@ p, address {
 
   .dock-xs .dock-label {
     font-size: .625rem;
-  }
-
-  .left-5 {
-    left: calc(var(--spacing) * 5);
   }
 
   .file-input {
@@ -6943,11 +6929,6 @@ p, address {
     border-collapse: collapse;
   }
 
-  .-translate-y-1\/2 {
-    --tw-translate-y: calc(calc(1 / 2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
   .swap-rotate .swap-on, .swap-rotate input:indeterminate ~ .swap-on {
     rotate: 45deg;
   }
@@ -7142,16 +7123,18 @@ p, address {
     flex-wrap: wrap;
   }
 
-  .justify-between {
-    justify-content: space-between;
-  }
-
   .justify-center {
     justify-content: center;
   }
 
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+
+  :where(.space-x-4 > :not(:last-child)) {
+    --tw-space-x-reverse: 0;
+    margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
+    margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .tabs-box {
@@ -7750,6 +7733,10 @@ p, address {
     background-color: var(--color-base-200);
   }
 
+  .bg-neutral {
+    background-color: var(--color-neutral);
+  }
+
   .divider-accent:before, .divider-accent:after {
     background-color: var(--color-accent);
   }
@@ -7979,6 +7966,10 @@ p, address {
     padding: calc(var(--spacing) * 2);
   }
 
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
@@ -8187,11 +8178,6 @@ p, address {
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
 
   .tabs-lg {
@@ -9707,24 +9693,6 @@ p, address {
   }
 }
 
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false
@@ -9748,6 +9716,12 @@ p, address {
 @property --tw-skew-y {
   syntax: "*";
   inherits: false
+}
+
+@property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 
 @property --tw-border-style {
@@ -9965,14 +9939,12 @@ p, address {
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after, ::backdrop {
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
       --tw-rotate-x: initial;
       --tw-rotate-y: initial;
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-space-x-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-shadow: 0 0 #0000;

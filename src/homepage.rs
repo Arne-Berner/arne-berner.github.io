@@ -1,7 +1,6 @@
 use leptos::prelude::*;
 use crate::common::navbar::NavBar;
 use crate::common::footer::SiteFooter;
-// use leptos_router::components::A;
 
 /// Renders the home page of your application.
 #[component]

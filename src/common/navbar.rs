@@ -5,7 +5,7 @@ pub fn NavBar() -> impl IntoView {
     view! {
       <nav class="navbar bg-base-100 shadow-sm" aria-label="Main navigation">
         <div class="navbar-start">
-          <a class="btn btn-ghost text-xl" href="/" aria-label="Home page: Arne Berner">
+          <a class="btn btn-ghost text-5xl" href="/" aria-label="Home page: Arne Berner">
             Arne Berner
           </a>
         </div>

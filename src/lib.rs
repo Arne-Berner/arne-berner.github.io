@@ -6,6 +6,7 @@ pub mod common;
 pub mod vita;
 pub mod audio;
 pub mod showreel;
+pub mod contact;
 
 #[cfg(feature = "hydrate")]
 #[wasm_bindgen::prelude::wasm_bindgen]

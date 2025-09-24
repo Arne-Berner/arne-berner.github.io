@@ -5,7 +5,7 @@ use crate::common::todo::TODO;
 
 /// Renders the Audiopage for your website
 #[component]
-pub fn Video() -> impl IntoView {
+pub fn Showreel() -> impl IntoView {
     view! {
       <NavBar />
       <TODO />

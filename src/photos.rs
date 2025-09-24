@@ -28,7 +28,7 @@ impl SlideData {
 /// A Carousel that uses daisy uis center carousel with space between each card
 #[component]
 pub fn Carousel() -> impl IntoView {
-    let file_idents = ["2049", "1777", "1810", "2049", "1832"];
+    let file_idents = ["2049", "1777", "1810", "1942", "1832"];
     let filenames = file_idents.iter()
         .enumerate()
         .map(|(num, ident)| {
@@ -38,7 +38,7 @@ pub fn Carousel() -> impl IntoView {
         })
         .collect::<Vec<_>>();
         
-    view! { <div class="carousel carousel-center w-full bg-neutral space-x-4 p-4">{filenames}</div> }
+    view! { <div class="carousel carousel-center w-full bg-neutral space-x-4 ">{filenames}</div> }
 }
 
 #[component]

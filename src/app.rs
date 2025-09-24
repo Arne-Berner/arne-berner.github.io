@@ -10,7 +10,8 @@ use crate::homepage::HomePage;
 use crate::vita::Vita;
 use crate::photos::Photos;
 use crate::audio::Audio;
-use crate::video::Video;
+use crate::showreel::Showreel;
+use crate::impressum::Impressum;
 
 pub fn shell(options: LeptosOptions) -> impl IntoView {
     view! {
@@ -57,7 +58,8 @@ pub fn App() -> impl IntoView {
             <Route path=path!("/vita") view=Vita ssr=SsrMode::Static(StaticRoute::new()) />
             <Route path=path!("/photos") view=Photos ssr=SsrMode::Static(StaticRoute::new()) />
             <Route path=path!("/audio") view=Audio ssr=SsrMode::Static(StaticRoute::new()) />
-           <Route path=path!("/video") view=Video ssr=SsrMode::Static(StaticRoute::new()) />
+           <Route path=path!("/showreel") view=Showreel ssr=SsrMode::Static(StaticRoute::new()) />
+           <Route path=path!("/impressum") view=Impressum ssr=SsrMode::Static(StaticRoute::new()) />
           </FlatRoutes>
         </main>
       </Router>

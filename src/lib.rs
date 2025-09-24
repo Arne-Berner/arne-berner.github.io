@@ -1,10 +1,11 @@
 pub mod app;
 pub mod homepage;
+pub mod impressum;
 pub mod photos;
 pub mod common;
 pub mod vita;
 pub mod audio;
-pub mod video;
+pub mod showreel;
 
 #[cfg(feature = "hydrate")]
 #[wasm_bindgen::prelude::wasm_bindgen]

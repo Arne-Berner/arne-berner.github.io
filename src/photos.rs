@@ -17,9 +17,9 @@ pub fn Photos() -> impl IntoView {
 pub fn Carousel() -> impl IntoView {
     view! {
       <div class="carousel w-full">
-        <div id="slide1" class="carousel-item relative w-full">
+        <div id="slide1" class="carousel-item relative max-h-screen">
           <img
-            class="w-full"
+            class="max-h-screen"
             src="./photos/DSC01699-800.webp"
             srcset="
             ./photos/DSC01699-400.webp 400w,
@@ -45,9 +45,9 @@ pub fn Carousel() -> impl IntoView {
             </a>
           </div>
         </div>
-        <div id="slide2" class="carousel-item relative w-full">
+        <div id="slide2" class="carousel-item relative max-h-screen">
           <img
-            class="w-full"
+            class="max-h-screen"
             src="./photos/DSC01810-800.webp"
             srcset="
             ./photos/DSC01810-400.webp 400w,

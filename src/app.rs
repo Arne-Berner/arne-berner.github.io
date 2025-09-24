@@ -7,6 +7,7 @@ use leptos_router::{
     SsrMode,
 };
 use crate::homepage::HomePage;
+use crate::vita::Vita;
 use crate::photos::Photos;
 
 pub fn shell(options: LeptosOptions) -> impl IntoView {
@@ -51,6 +52,7 @@ pub fn App() -> impl IntoView {
         <main>
           <FlatRoutes fallback=|| "Page not found.".into_view()>
             <Route path=path!("/") view=HomePage ssr=SsrMode::Static(StaticRoute::new()) />
+            <Route path=path!("/vita") view=Vita ssr=SsrMode::Static(StaticRoute::new()) />
             <Route path=path!("/photos") view=Photos ssr=SsrMode::Static(StaticRoute::new()) />
           </FlatRoutes>
         </main>

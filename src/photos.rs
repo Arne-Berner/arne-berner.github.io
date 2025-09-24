@@ -1,8 +1,6 @@
 use leptos::prelude::*;
 use crate::common::navbar::NavBar;
 use crate::common::footer::SiteFooter;
-// use leptos_router::components::A;
-// TODO: use slide from the middle (rotate it to beginning)
 // TODO: Add Gallery view Button (pop up window)
 
 /// Renders the home page of your application.
@@ -27,6 +25,7 @@ impl SlideData {
 
 }
 
+/// A Carousel that uses daisy uis center carousel with space between each card
 #[component]
 pub fn Carousel() -> impl IntoView {
     let file_idents = ["2049", "1777", "1810", "2049", "1832"];

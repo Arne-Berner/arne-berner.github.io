@@ -2,6 +2,7 @@ pub mod app;
 pub mod homepage;
 pub mod photos;
 pub mod common;
+pub mod vita;
 
 #[cfg(feature = "hydrate")]
 #[wasm_bindgen::prelude::wasm_bindgen]

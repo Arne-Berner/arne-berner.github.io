@@ -1,4 +1,4 @@
-use leptos::*;
+use leptos::prelude::*;
 use crate::common::navbar::NavBar;
 use crate::common::footer::SiteFooter;
 
@@ -7,30 +7,21 @@ use crate::common::footer::SiteFooter;
 #[component]
 pub fn Contact() -> impl IntoView {
     view! {
-        <Navbar/>
+        <NavBar/>
         <main class="min-h-screen flex items-center justify-center bg-base-200 p-6">
             <div class="card w-full max-w-md bg-base-100 shadow-xl">
                 <div class="card-body items-center text-center">
-                    <h1 class="card-title text-3xl">"Contact Me"</h1>
-                    <p class="text-base-content/70">"I’d love to hear from you!"</p>
+                    <h1 class="card-title text-3xl">"Schnacken?"</h1>
+                    <p class="text-base-content/70">"Schreib mir gerne einen Brief"</p>
 
                     <div class="divider"></div>
 
                     <div class="w-full space-y-3">
                         <a
-                            href="https://instagram.com/your_instagram_username"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-outline btn-primary w-full"
-                        >
-                            "Instagram"
-                        </a>
-
-                        <a
-                            href="mailto:your@email.com"
+                            href="mailto:info@arneberner.de"
                             class="btn btn-secondary w-full"
                         >
-                            "Email Me"
+                            "Email"
                         </a>
                     </div>
                 </div>

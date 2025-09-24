@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "./style/daisyui.js" {
+  themes: light, dark --prefersdark, pastel, cupcake --default;
+}
+
+@source "./src/**/*.rs";

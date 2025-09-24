@@ -1,6 +1,6 @@
-body {
-  font-family: sans-serif;
-  text-align: center;
-  background: #1c1d1c;
-  color: #ededed;
+@use "hero";
+
+p, address {
+  white-space: pre-line;
 }
+

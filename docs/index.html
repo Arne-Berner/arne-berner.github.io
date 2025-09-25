@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="de" data-theme="cupcake"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Author: Arne Berner,
+            Vita, Showreel, Fotos und Kontakt für den Schauspieler Arne Berner,
+            Single Page Application"><!><link rel="modulepreload" href="/pkg/arneberner.js" crossorigin="KeS2kdn0cZWenNpzhgbSnA"><link rel="preload" href="/pkg/arneberner.wasm" as="fetch" type="application/wasm" crossorigin="KeS2kdn0cZWenNpzhgbSnA"><script type="module" nonce="KeS2kdn0cZWenNpzhgbSnA">((root, pkg_path, output_name, wasm_output_name) => {
+	let MOST_RECENT_CHILDREN_CB = [];
+
+	function idle(c) {
+		if ("requestIdleCallback" in window) {
+			window.requestIdleCallback(c);
+		} else {
+			c();
+		}
+	}
+	async function hydrateIslands(rootNode, mod) {
+		async function traverse(node) {
+			if (node.nodeType === Node.ELEMENT_NODE) {
+				const tag = node.tagName.toLowerCase();
+				if(tag === 'leptos-island') {
+					const children = [];
+					const id = node.dataset.component || null;
+
+					await hydrateIsland(node, id, mod);
+					
+					for(const child of node.children) {
+						await traverse(child, children);
+					}
+				} else {
+					if (tag === 'leptos-children') {
+						MOST_RECENT_CHILDREN_CB.push(node.$$on_hydrate);
+						for(const child of node.children) {
+							await traverse(child);
+						};
+						// un-set the "most recent children"
+						MOST_RECENT_CHILDREN_CB.pop();
+					} else {
+						for(const child of node.children) {
+							await traverse(child);
+						};
+					}
+				}
+			}
+		}
+
+		await traverse(rootNode);
+	}
+	async function hydrateIsland(el, id, mod) {
+		const islandFn = mod[id];
+		if (islandFn) {
+			const children_cb = MOST_RECENT_CHILDREN_CB[MOST_RECENT_CHILDREN_CB.length-1];
+			if (children_cb) {
+				children_cb();
+			}
+			const res = islandFn(el);
+			if (res && res.then) {
+				await res;
+			}
+		} else {
+			console.warn(`Could not find WASM function for the island ${id}.`);
+		}
+	}
+	idle(() => {
+		import(`${root}/${pkg_path}/${output_name}.js`)
+			.then(mod => {
+				mod.default({module_or_path: `${root}/${pkg_path}/${wasm_output_name}.wasm`}).then(() => {
+					mod.hydrate();
+					hydrateIslands(document.body, mod);
+				});
+
+				window.__hydrateIsland = (el, id) => hydrateIsland(el, id, mod);
+			})
+	});
+})
+("", "pkg", "arneberner", "arneberner");</script><!--HEAD--><link id="leptos" rel="stylesheet" href="/pkg/arneberner.css"><title>Arne Berner</title></head><body><main><nav aria-label="Main navigation" class="navbar bg-base-100 shadow-sm"><div class="navbar-start"><a class="btn btn-ghost text-5xl" href="/" aria-label="Home page: Arne Berner">
+            Arne Berner
+          </a></div><div class="navbar-center hidden lg:flex"><ul class="menu menu-horizontal px-1" role="menubar" aria-label="Main menu"><li><a href="/vita" role="menuitem">
+                Vita
+              </a></li><li><a href="/photos" role="menuitem">
+                Photos
+              </a></li><li><a href="/showreel" role="menuitem">
+                Showreel
+              </a></li><li><a href="/audio" role="menuitem">
+                Audio
+              </a></li><li><a href="/contact" role="menuitem">
+                Kontakt
+              </a></li></ul></div><div class="navbar-end"><div class="dropdown dropdown-end"><button tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Open main menu" aria-controls="mobile-menu" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="6" width="18" height="1" rx="1"></rect><rect x="3" y="11" width="18" height="1" rx="1"></rect><rect x="3" y="16" width="18" height="1" rx="1"></rect></svg></button><ul id="mobile-menu" tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow" role="menu" aria-label="Mobile menu"><li><a href="/vita" role="menuitem">
+                  Vita
+                </a></li><li><a href="/photos" role="menuitem">
+                  Photos
+                </a></li><li><a href="/showreel" role="menuitem">
+                  Showreel
+                </a></li><li><a href="/audio" role="menuitem">
+                  Audio
+                </a></li><li><a href="/contact" role="menuitem">
+                  Kontakt
+                </a></li></ul></div></div></nav><section aria-label="Introductory section" class="hero min-h-screen bg-center bg-no-repeat bg-cover"><div class="hero-overlay" aria-hidden="true"></div><div class="hero-content text-neutral-content text-center"><header class="max-w-md mx-auto"><h1 class="mb-5 text-5xl font-bold">Moin moin!</h1><p class="mb-5">Warum moin moin fragst du dich?
+              Wenn es um Film geht, werde ich gesprächig. Deswegen schreib' mich gerne jederzeit an, wenn du Lust hast über Filmrollen zu schnacken!</p><a class="btn btn-primary" href="/contact" aria-label="Kontakt aufnehmen">
+              Kontakt
+            </a></header></div></section><footer aria-label="Footer" class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10"><nav class="flex flex-wrap justify-center gap-4" role="navigation" aria-label="Footer navigation"><ul class="flex flex-wrap justify-center gap-4 m-0 p-0 list-none"><li><a class="link link-hover" href="/vita" aria-label="Vita">
+                Vita
+              </a></li><li><a class="link link-hover" href="/photos" aria-label="Photos">
+                Photos
+              </a></li><li><a class="link link-hover" href="/showreel" aria-label="Showreel">
+                Showreel
+              </a></li><li><a class="link link-hover" href="/audio" aria-label="Audio">
+                Audio
+              </a></li><li><a class="link link-hover" href="/contact" aria-label="Kontakt">
+                Kontakt
+              </a></li><li><a class="link link-hover" href="/impressum" aria-label="Impressum">
+                Impressum
+              </a></li></ul></nav><aside><p>Photo Copyright <!>© Hannes Gorissen 2025</p></aside></footer></main></body></html><script nonce="KeS2kdn0cZWenNpzhgbSnA">__RESOLVED_RESOURCES=[];__SERIALIZED_ERRORS=[];__PENDING_RESOURCES=[];__RESOURCE_RESOLVERS=[];</script><script nonce="KeS2kdn0cZWenNpzhgbSnA">__INCOMPLETE_CHUNKS=[];</script>

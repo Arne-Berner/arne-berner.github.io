@@ -14,7 +14,9 @@ pub fn Vita() -> impl IntoView {
 
     view! {
       <NavBar />
-      <Tabs />
+      <main>
+        <Tabs />
+      </main>
       <SiteFooter />
     }
 }
@@ -23,7 +25,7 @@ pub fn Vita() -> impl IntoView {
 #[component]
 fn Tabs() -> impl IntoView {
     view! {
-      <div role="tablist" class="tabs tabs-border justify-center">
+      <div class="tabs tabs-border justify-center">
         <input
           type="radio"
           name="my_tabs_3"

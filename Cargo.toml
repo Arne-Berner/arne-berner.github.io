@@ -14,7 +14,7 @@ console_error_panic_hook = { version = "0.1", optional = true }
 leptos_axum = { version = "0.8.5", optional = true }
 leptos_meta = { version = "0.8.5" }
 tokio = { version = "1", features = ["rt-multi-thread"], optional = true }
-wasm-bindgen = { version = "=0.2.100", optional = true }
+wasm-bindgen = { version = "=0.2.103", optional = true }
 serde = "1.0.219"
 thiserror = "2.0.12"
 chrono = "0.4.41"
@@ -87,7 +87,7 @@ end2end-dir = "end2end"
 browserquery = "defaults"
 
 # The environment Leptos will run in, usually either "DEV" or "PROD"
-env = "DEV"
+env = "PROD"
 
 # The features to use when compiling the bin target
 #
